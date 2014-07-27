@@ -1,0 +1,7 @@
+Thumbs.db
+.DS_Store
+*~
+.sass-cache
+.coffeescript-cache
+
+node_modules

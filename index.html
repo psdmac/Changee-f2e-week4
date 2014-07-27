@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Changee Learning Path - 讓網頁動起來</title>
+
+		<meta name="description" content="如何從零開始，利用網路資源訓練成為前端工程師">
+		<meta name="author" content="Mark Wu">
+    <meta property="og:title" content="Changee Learning Path - 讓網頁動起來">
+    <meta property="og:description" content="在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「資訊」，然而過多的資訊反而無法判斷什麼才是適合自己的「資源」。現有的學習資源非常豐富，但卻散落在各處，使得「自我學習」時總是花費大量時間在搜尋適合自己的資訊。因此我們希望能夠建立 Changee Learning Path「學習路徑平台」，整合資源與資訊，透過「學習分類帽」、「學習軌跡」、「實體資源」三個主要項目，建立方便自學的「學習路徑平台」。" />
+    <meta property="og:image" content="http://week3.learning-path.info/images/week3-graph.png">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="seo-wrapper">
+      <h1>Changee Learning Path - 讓網頁動起來</h1>
+      <p>
+        在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「資訊」，然而過多的資訊反而無法判斷什麼才是適合自己的「資源」。現有的學習資源非常豐富，但卻散落在各處，使得「自我學習」時總是花費大量時間在搜尋適合自己的資訊。因此我們希望能夠建立 Changee Learning Path「學習路徑平台」，整合資源與資訊，透過「學習分類帽」、「學習軌跡」、「實體資源」三個主要項目，建立方便自學的「學習路徑平台」。
+      </p>
+      <img src="http://week3.learning-path.info/images/week1-graph.png">
+    </div>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section data-background="images/congruent_pentagon.png" data-background-repeat="repeat">
+						<h1>讓網頁動起來</h1>
+						<h3>jQuery, Console, DOM, Selector, jQuery API, Event</h3>
+						<img src="images/learningpath.jpg">
+						<p>
+							<small><a target="_blank" href="https://www.facebook.com/changeeinfo">Changee</a> | <a target="_blank" href="http://learning-path.info">Learning Path</a></small>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>jQuery</h1>
+					</section>
+					<section>
+						<h2>開始前要知道</h2>
+						<ul>
+							<li>HTML - 內容、結構</li>
+							<li>CSS - 樣式</li>
+							<li>JavaScript - 行為</li>
+						</ul>
+						<p>jQuery Package 裝了沒？</p>
+					</section>
+					<section>
+						<h2>為什麼用 jQuery</h2>
+						<ul>
+							<li>簡單好寫</li>
+							<li>跨瀏覽器（各瀏覽器實作 JavaScript 方法不同）</li>
+							<li>對於舊瀏覽器有好的支援度</li>
+						</ul>
+						<p>jQuery 口號：write less, do more.</p>
+					</section>
+					<section>
+						<h2>jQuery 可以做</h2>
+						<ul>
+							<li>尋找 - 尋找 HTML 文件裡的元素</li>
+							<li>改變 - 改變 HTML 內容</li>
+							<li>監聽 - 反應使用者的動作</li>
+							<li>動畫 - 做出移動、漸變效果</li>
+							<li>溝通 - 透過網路，動態載入內容</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Console</h1>
+					</section>
+					<section>
+						<h2>其實開發工具裡面就可以用</h2>
+						<ul>
+							<li>打開開發工具到 Console 分頁</li>
+							<li>輸入 <pre><code data-trim>alert("Hello, World!");</code></pre></li>
+							<li><img src="images/alert.png" alt="console alert"></li>
+							<li>是不是很容易？</li>
+							<li>試試 <pre><code data-trim>confirm("Start Engines?");</code></pre></li>	
+							<li>試試 <pre><code data-trim>prompt("Passenger Count:");</code></pre></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Find it. Change it.</h2>
+						<p>以 <a target="_blank" href="http://learning-path.info">LearningPath</a> 網站為例</p>
+						<ul style="width: 500px;">
+							<li>找到一個 HTML 標籤</li>
+							<li>用開發工具找到標題 logo</li>
+							<li>用 jQuery 選取 <pre><code data-trim>$(".brand")</code></pre></li>
+							<li>改變內容 <pre><code data-trim>$(".brand").html("Hello, World!")</code></pre></li>	
+						</ul>
+					</section>
+				</section>
+				
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1>DOM</h1>
+					</section>
+					<section>
+						<h2>Document Object Model</h2>
+						<ul>
+							<li>由瀏覽器產生的樹狀結構</li>
+							<li>我們可以利用 JavaScript 快速找到 HTML 元素</li>
+						</ul>
+						<img src="images/html.png" alt="HTML document">
+						<img src="images/dom.png" alt="The DOM">
+					</section>
+					<section>
+						<h2>jQuery 如何搜尋 DOM</h2>
+						<ul>
+							<li>使用 jQuery 前綴<pre><code>jQuery(document)</code></pre></li>
+							<li>使用 $ 前綴<pre><code>$(document)</code></pre></li>
+							<li>就像使用 CSS 選取器一樣</li>
+							<li>選取 HTML 標籤<pre><code>$('h1')</code></pre></li>
+							<li>選取 Class <pre><code>$('.brand')</code></pre></li>
+							<li>選取 ID <pre><code>$('#logo')</code></pre></li>
+						</ul>
+					</section>
+					<section>
+						<h2>jQuery Object</h2>
+						<ul>
+							<li>用 jQuery 選取的 DOM 叫 jQuery Method</li>
+							<li>有非常多的 <a target="_blank" href="http://api.jquery.com/">Method</a> 可以用</li>
+							<li>.html() 就是一種 Method</li>
+						</ul>
+						<pre><code data-trim>
+							$('.brand').html('Hello, World!');
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>開始使用 jQuery</h1>
+					</section>
+					<section>
+						<h2>下載 jQuery</h2>
+						<ul>
+							<img src="images/jquery.png" alt="download jquery">
+							<li>v1.11.1 - 第一版支援舊瀏覽器</li>
+							<li>v2.1.1 - 新版本，檔案較小，不支援舊瀏覽器</li>
+						</ul>
+					</section>
+					<section>
+						<h2>引入 jQuery</h2>
+						<ul>
+							<li>用 script 標籤引入 HTML 中 <pre><code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+							<li>引入 CDN 檔案，免下載 <pre><code>&lt;script src=&quot;//code.jquery.com/jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+						</ul>
+					</section>
+					<section>
+						<h2>撰寫 jQuery</h2>
+						<ul>
+							<li>引入外部 js 檔案 <pre><code>&lt;script src=&quot;application.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+							<li>在 HTML 的 script 標籤內撰寫（建議放在 &lt;body&gt; 之前）<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  alert(&quot;Hello World!&quot;);
+&lt;/script&gt;</code></pre></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>切換顏色的按鈕</h1>
+						<a class="jsbin-embed" href="http://jsbin.com/xajise/1/embed?html,js,output">Try jQuery</a><script src="http://static.jsbin.com/js/embed.js"></script>
+						<p>其實你可以看的懂</p>
+					</section>
+					<section>
+						<h2>監聽 DOM 載入完成</h2>
+						<pre><code>$(document).ready(function() { 
+  // 當 DOM 載入完成，執行裡面的程式
+});</code></pre>
+						<ul>
+							<li>還沒載入 DOM 就執行會沒有效果</li>
+							<li>因為我們是處理介面，所以一定會用到。</li>
+							<li>匿名函式 <pre><code>function() {...}</code></pre></li>
+						</ul>
+					</section>
+					<section>
+						<h2>監聽點擊（Click）事件</h2>
+						<img src="images/clickevent.png" alt="click event">
+						<img src="images/jqueryObjectMethod.png" alt="jQueryObjectMethod">
+						<p>還有很多 event 可以使用<a target="_blank" href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a></p>
+					</section>
+					<section>
+						<h2>.toggleClass(&lt;className&gt;)</h2>
+						<ul>
+							<li>眾多 jQuery API 裡面的其中一個</li>
+							<li>執行一次加入 Class，再執行一次移除 Class</li>
+							<li>跟 toggle 有關的 API <a target="_blank" href="http://api.jquery.com/toggle/">.toggle()</a>, 
+								<a target="_blank" href="http://api.jquery.com/fadeToggle/">.fadeToggle()</a>, 
+								<a target="_blank" href="http://api.jquery.com/slideToggle/">.slideToggle()</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>切換選單效果</h1>
+						<a class="jsbin-embed" href="http://jsbin.com/mahup/2/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+					</section>
+					<section>
+						<h2>$(this)</h2>
+						<ul>
+							<li>只會選取你點的那個</li>
+							<li>$(this) 是 jQuery Object</li>
+							<li>與 JavaScript 裡面的 this 不同</li>
+							<li>this 的觀念很重要，但初學者可以不要管</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>回到頁首</h1>
+						<a class="jsbin-embed" href="http://jsbin.com/hukeqe/1/embed?js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+					</section>
+					<section>
+						<h2><a target="_blank" href="http://api.jquery.com/scrollTop/">.scrollTop(value)</a></h2>
+						<ul>
+							<li>取得目前距離頂端有多遠</li>
+							<li>數值帶入，就可以直接到指定位置</li>
+							<li>console.log() 可以在開發工具中印出你想要看到的東西</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a target="_blank" href="http://api.jquery.com/animate/">.animate(properties, options)</a></h2>
+						<ul>
+							<li>properties 帶入 CSS 的樣式效果</li>
+							<li>options 帶入變化時間</li>
+							<li>耗效能，已經要漸漸被 CSS3 取代</li>
+							<li>舊款 IE 瀏覽器就靠它</li>
+							<li>.stop() 可以暫停動畫</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a target="_blank" href="http://api.jquery.com/fadeIn/">.fadeIn()</a>, <a href="http://api.jquery.com/fadeOut/">.fadeOut()</a></h2>
+						<ul>
+							<li>淡出、淡入效果，掌管透明度</li>
+							<li>有快慢、秒數可以設定</li>
+							<li>跟動畫差不多，.stop() 可以中斷效果</li>
+							<li>相似的還有 <a target="_blank" href="http://api.jquery.com/fadeTo/">.fadeTo()</a>, <a target="_blank" href="">.fadeToggle()</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>左側選單</h1>
+						<a class="jsbin-embed" href="http://jsbin.com/pebopi/1/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+					</section>
+					<section>
+						<h2>變數 var</h2>
+						<ul>
+							<li>JavaScript 是弱型別語言，不需要宣告變數屬性</li>
+							<li>使用變數要宣告，不然變成全域變數</li>
+							<li>把會重複利用到的 jQuery Object 設成變數，節省效能</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a target="_blank" href="http://api.jquery.com/hasClass/">.hasClass(&lt;className&gt;)</a></h2>
+						<ul>
+							<li>判斷 DOM 有沒有那個 Class</li>
+							<li>回傳 true 或 false</li>
+							<li>用來判別介面狀態，搭配 if-else 使用</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a target="_blank" href="http://api.jquery.com/event.preventDefault/">event.preventDefault()</a></h2>
+						<ul>
+							<li>防止預設的行為觸發</li>
+							<li>常用在把超連結當按鈕，防止 href 屬性</li>
+							<li>還有許多 event</li>
+							<li>
+								<a terget="_blank" href="http://api.jquery.com/event.stopPropagation/">event.stopPropagation()</a>, 
+								<a terget="_blank" href="http://api.jquery.com/event.pageX/">event.pageX</a>, 
+								<a terget="_blank" href="http://api.jquery.com/event.target/">event.target</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+					<h2><a target="_blank" href="https://www.facebook.com/groups/changee.learningpath/">Facebook 社團</a></h2>
+				</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-51808149-1', 'week1.learning-path.info', {
+            'cookieDomain': 'none'
+        });
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+
+	</body>
+</html>

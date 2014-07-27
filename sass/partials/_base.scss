@@ -1,0 +1,71 @@
+#seo-wrapper {
+  display: none;
+}
+.reveal {
+  h1,h2,h3,h4,h5,h6 {
+    font-family: Lato, "LiHei Pro", "儷黑Pro", \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4,"微軟正黑體", "Microsoft JhengHei", Impact, sans-serif;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    text-transform: none;
+    .name {
+      text-transform: none;
+    }
+  }
+  .avatar-wrapper {
+    // @include inline-block();
+    width: 300px;
+    height: 300px;
+    background: url(../images/avatar.jpg);
+    @include background-size(cover);
+    float: left;
+    border-radius: 100%;
+    border: 5px solid #586e75;
+  }
+  .paragraph {
+    margin-top: 80px;
+  }
+
+  .intro-list {
+    width: 500px;
+  }
+  .slide-share {
+    width: 730px;
+    height: 600px;
+    margin: 0 auto;
+  }
+}
+
+.front-end {
+  height: 450px;
+  background: #ffeb3b;
+  position: relative;
+  > div {
+    @include inline-block();
+  }
+  .html {
+    position: absolute;
+    width: 200px;
+    top: 10px;
+    left: 0;
+    padding: 30px;
+    background: #42bd41;
+  }
+  .css {
+    position: absolute;
+    width: 200px;
+    left: 300px;
+    bottom: 0;
+    padding: 30px;
+    background: #4dd0e1;
+  }
+  .js {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 120px 30px 30px 30px;
+    background: #ffeb3b;
+  }
+}
